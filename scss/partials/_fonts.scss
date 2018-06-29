@@ -1,0 +1,40 @@
+//Font for all Sites.
+
+// Import Compass library.
+@import 'compass';
+
+
+@font-face {
+font-family: 'ss-bold';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica 35 Thin'), url('../fonts/HelveticaNeue-BoldExt.woff') format('woff');
+}
+
+@font-face {
+font-family: 'ss-light';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica 35 Thin'), url('../fonts/HelveticaNeue-Thin.woff') format('woff');
+}
+
+@font-face {
+font-family: 'ss-black';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica 95 Black'), url('../fonts/HelveticaNeue-Black.woff') format('woff');
+}
+
+@font-face {
+font-family: 'ss-medium';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue Medium'), url('../fonts/HelveticaNeueMedium.woff') format('woff');
+}
+
+@font-face {
+font-family: 'ss-regular';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue Medium'), url('../fonts/HelveticaNeue-Roman.woff') format('woff');
+}

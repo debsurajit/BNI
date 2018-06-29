@@ -1,0 +1,218 @@
+// Importing Libraries.
+@import 'partials/importer';
+
+#countup {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  text-align: center;
+  color: $black;
+  font-size: $font-size-36;
+  border-radius: 5px;
+  
+  #days {
+    background: $white;
+    width: 60px;
+    height: 50px;
+    padding-top: 15px;
+    border-radius: 5px;
+    font-family: "ss-black";
+    position: relative;
+    margin: 0 auto 10px;    
+  }
+  
+  .timeRefDays {
+    font-size: $font-size-22;
+    color: darken($white, 15%);
+    font-family: "ss-medium";
+  }
+}
+
+.main-header {
+  height: 100vh;
+  
+  @media screen and (min-width: 1400px) {
+    height: auto;
+  }
+  
+  @media screen and (max-width: $md) {
+    height: auto;
+    background: url(../images/banner-bg.png) no-repeat;
+  }
+  
+  #canvas {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  
+  }
+
+  .max-header {
+    max-width: 1400px;
+    margin: 0 auto;
+   
+    .top-header {
+      width: 100%;
+      float: left;
+      
+      .logo-section {
+        width: auto;
+        float: left;
+        margin: 30px 0 0 30px;
+        @include transition(0.5s);
+        
+        img {
+          @include transition(0.5s);
+        }
+      }
+      
+      .main-menu {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        float: left;
+        
+        @include transition(0.5s);
+        
+        ul {
+          margin: 40px 30px 0 0;
+          @include transition(0.5s);
+          li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: $font-size-24;
+            padding: 15px;
+            
+            &:nth-child(1) {
+              display: none;
+            }
+            
+            a {
+              color: $base-yellow;
+              
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+     
+    .fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 22;
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid darken($base-yellow, 30%);
+      
+      .logo-section { 
+        margin: 0;
+        padding: 15px;
+        img {
+          width: 100px;
+        }
+      }
+      .main-menu {
+        padding: 10px 0;
+        
+        ul {
+          margin: 0;
+        }
+        
+      }
+      
+    }
+    
+    .equal {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      float: left;
+        .banner-img {
+          img {
+            width: 100%;
+          }
+        }
+
+        .text {
+          /*color: $base-yellow;*/
+          text-transform: uppercase;
+          text-align: center;
+          padding: 5% 10% 0 0;
+
+          h2 {
+            font-size: $font-size-38;
+            margin-bottom: 30px;
+            position: relative;
+            background: linear-gradient(to top, $base-yellow 30%, lighten($base-yellow, 15%) 50%, $base-yellow 70%);
+            -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+            display: inline-block;
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: -160px;
+              width: 150px;
+              height: 2px;
+              background: linear-gradient(to left, $base-yellow 0%, $black 100%);
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: -160px;
+              width: 150px;
+              height: 2px;
+              background: linear-gradient(to right, $base-yellow 0%, $black 100%);
+            }
+          }
+
+          p {
+            font-size: $font-size-56;
+            line-height: 60px;
+            font-family: "ss-medium";
+            background: linear-gradient(to top, $base-yellow 30%, lighten($base-yellow, 15%) 50%, $base-yellow 70%);
+            -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+          }
+
+          ul {
+            margin: 25px 0 0;
+            padding: 25px 0 0 0;
+            border-top: 2px dashed #3c3c3c;
+            li {
+              list-style-type: none;
+              background: linear-gradient(to bottom, $white 30%, $black 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-size: $font-size-24;
+              display: inline-block;
+              text-transform: capitalize;
+              border-right: 2px solid $white;
+              padding: 0 10px;
+
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
+.content {
+  height: 500px;
+  width: 100%;
+  float: left;
+}
